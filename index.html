@@ -35,70 +35,61 @@
         
         .mobile-menu {
             transition: all 0.3s ease;
-        }
-        
-        .mobile-menu.active {
-            left: 0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
 <body class="bg-gray-50">
-    <!-- Mobile Menu Button -->
-    <div class="lg:hidden fixed top-4 left-4 z-50">
-        <button id="mobileMenuButton" class="p-2 rounded-full bg-pink-200 text-pink-700 shadow-md">
-            <i class="fas fa-bars text-xl"></i>
-        </button>
+    <!-- Top Banner -->
+    <div class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+            <!-- Menu Button with Paw Print -->
+            <button id="mobileMenuButton" class="flex items-center space-x-2 p-2 rounded-lg hover:bg-pink-50">
+                <div class="relative">
+                    <i class="fas fa-paw text-2xl text-pink-500"></i>
+                    <i class="fas fa-heart text-xs text-pink-600 absolute -top-1 -right-1"></i>
+                </div>
+                <span class="font-medium text-gray-700">Menú</span>
+            </button>
+            
+            <!-- Brand and Slogan -->
+            <div class="text-center">
+                <h1 class="text-xl font-bold text-pink-600">@Vetbarri.cl</h1>
+                <p class="text-xs text-gray-500">Tu red digital de salud</p>
+            </div>
+            
+            <!-- Auth Buttons -->
+            <div class="flex space-x-2">
+                <a href="#" class="px-3 py-1 text-sm rounded-full border border-pink-600 text-pink-600 hover:bg-pink-50">Registrarse</a>
+                <a href="#" class="px-3 py-1 text-sm rounded-full bg-pink-600 text-white hover:bg-pink-700">Ingresar</a>
+            </div>
+        </div>
     </div>
 
-    <!-- Mobile Menu -->
-    <div id="mobileMenu" class="mobile-menu fixed top-0 left-[-100%] w-64 h-full bg-white shadow-lg z-40 p-6 transition-all duration-300">
-        <div class="flex justify-between items-center mb-8">
-            <h2 class="text-xl font-bold text-pink-600">Vetbarri.cl</h2>
-            <button id="closeMobileMenu" class="p-2 rounded-full bg-pink-100 text-pink-600">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-        <nav class="space-y-4">
+    <!-- Mobile Menu (now appears below banner) -->
+    <div id="mobileMenu" class="mobile-menu hidden w-full bg-white shadow-lg z-40 p-4 transition-all duration-300">
+        <nav class="space-y-2">
             <a href="#inicio" class="block py-2 px-4 rounded-lg hover:bg-pink-50 text-gray-700 hover:text-pink-600">Inicio</a>
             <a href="#servicios" class="block py-2 px-4 rounded-lg hover:bg-pink-50 text-gray-700 hover:text-pink-600">Nuestros Servicios</a>
             <a href="#porque-nosotros" class="block py-2 px-4 rounded-lg hover:bg-pink-50 text-gray-700 hover:text-pink-600">¿Por qué elegirnos?</a>
             <a href="#contacto" class="block py-2 px-4 rounded-lg hover:bg-pink-50 text-gray-700 hover:text-pink-600">Contacto</a>
             <a href="#blog" class="block py-2 px-4 rounded-lg hover:bg-pink-50 text-gray-700 hover:text-pink-600">@VetDiari.cl</a>
-            <div class="pt-4 border-t border-gray-200">
-                <a href="#" class="block py-2 px-4 rounded-lg bg-pink-100 text-pink-700 font-medium text-center">Iniciar sesión</a>
-            </div>
         </nav>
     </div>
-
-    <!-- Desktop Header -->
-    <header class="hidden lg:flex justify-between items-center p-6 bg-white shadow-sm">
-        <div class="flex items-center space-x-2">
-            <i class="fas fa-paw text-2xl text-pink-500"></i>
-            <h1 class="text-xl font-bold text-pink-600">Vetbarri.cl</h1>
-        </div>
-        <nav class="flex space-x-8">
-            <a href="#inicio" class="text-gray-700 hover:text-pink-600 font-medium">Inicio</a>
-            <a href="#servicios" class="text-gray-700 hover:text-pink-600 font-medium">Servicios</a>
-            <a href="#porque-nosotros" class="text-gray-700 hover:text-pink-600 font-medium">¿Por qué elegirnos?</a>
-            <a href="#contacto" class="text-gray-700 hover:text-pink-600 font-medium">Contacto</a>
-            <a href="#blog" class="text-gray-700 hover:text-pink-600 font-medium">@VetDiari.cl</a>
-        </nav>
-        <div>
-            <a href="#" class="px-4 py-2 rounded-full bg-pink-100 text-pink-700 font-medium hover:bg-pink-200">Iniciar sesión</a>
-        </div>
-    </header>
 
     <!-- Hero Section -->
     <section id="inicio" class="hero-gradient py-16 px-4 sm:px-6 lg:px-8">
         <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
             <div class="space-y-6">
-                <p class="text-lg font-medium text-pink-700">Medicina que se adapta, salud animal que avanza</p>
+                <p class="text-lg font-medium text-pink-700">Medicina que se adapta. Salud Animal que avanza</p>
                 <h1 class="text-4xl md:text-5xl font-bold text-gray-800 leading-tight">
                     @VETBARRI.CL<br>
                     <span class="text-pink-600">ZOOLUCIONES INTEGRALES</span>
                 </h1>
                 <p class="text-xl text-gray-700">
-                    A TU ALCANCE, SIN DIFICULTADES, NI COMPLICACIONES<br>
+                    A TU ALCANCE, SIN COMPLICACIONES<br>
+                    </P>
+                    </P>
                     Tu asistencia veterinaria en línea, donde estés, estamos.<br>
                     Siempre conectados
                 </p>
@@ -416,7 +407,7 @@
                             </div>
                             <div>
                                 <h4 class="font-bold text-gray-800 mb-1">Teléfono</h4>
-                                <p class="text-gray-600">+56 9 1234 5678</p>
+                                <p class="text-gray-600 hovered-element">+56 9 7499 7493</p>
                                 <p class="text-sm text-gray-500">Disponible 24/7 para emergencias</p>
                             </div>
                         </div>
@@ -427,7 +418,7 @@
                             </div>
                             <div>
                                 <h4 class="font-bold text-gray-800 mb-1">Email</h4>
-                                <p class="text-gray-600">hola@vetbarri.cl</p>
+                                <p class="text-gray-600">dra@vetbarri.cl</p>
                                 <p class="text-sm text-gray-500">Respondemos en menos de 24 horas</p>
                             </div>
                         </div>
@@ -438,7 +429,7 @@
                             </div>
                             <div>
                                 <h4 class="font-bold text-gray-800 mb-1">WhatsApp</h4>
-                                <p class="text-gray-600">+56 9 8765 4321</p>
+                                <p class="text-gray-600">+56 9 7499 7493</p>
                                 <a href="#" class="inline-block mt-2 px-4 py-2 bg-green-500 text-white rounded-full text-sm font-medium hover:bg-green-600 transition-colors">
                                     <i class="fab fa-whatsapp mr-2"></i> Enviar mensaje
                                 </a>
@@ -606,15 +597,10 @@
     <script>
         // Mobile menu toggle
         const mobileMenuButton = document.getElementById('mobileMenuButton');
-        const closeMobileMenu = document.getElementById('closeMobileMenu');
         const mobileMenu = document.getElementById('mobileMenu');
         
         mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.add('active');
-        });
-        
-        closeMobileMenu.addEventListener('click', () => {
-            mobileMenu.classList.remove('active');
+            mobileMenu.classList.toggle('hidden');
         });
         
         // Smooth scrolling for anchor links
